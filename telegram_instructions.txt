@@ -1,0 +1,13 @@
+Create your channel and your bot
+
+
+Define your file
+.telegram.sh
+TELEGRAM_TOKEN="your:TOKEN"
+TELEGRAM_CHAT="@yourchannel"
+
+
+Invoke  an script connecting to Oracle database and execute querys that you could sent results to telegram channel
+
+OUTPUT=$(sqlplus -s user/pass@tnsnames @tbs.sql)
+echo $OUTPUT | telegram -
